@@ -18,24 +18,15 @@ public class Main {
 			read = reader.nextLine();
 			switch (read) {
 			case "1":
-				Circle circle = new Circle();
-				circle.setFigureType(figureTypes[0]);
-				circle.getInfo();
-				//reader.close();
+				Circle circle = new Circle(figureTypes[0]);				
 				break;
 			case "2":
-
-				Square square = new Square();
-				square.setFigureType(figureTypes[1]);
-				square.getInfo();
-				//reader.close();
+				Square square = new Square(figureTypes[1]);
 				break;
 			case "3":
 
-				Triangle triangle = new Triangle();
-				triangle.setFigureType(figureTypes[2]);
-				triangle.getInfo();
-				//reader.close();
+				Triangle triangle = new Triangle(figureTypes[2]);
+				
 				break;
 
 			case "Q":
@@ -50,5 +41,9 @@ public class Main {
 			//reader.close();
 		}
 
-	}
+	
 }
+/*1 - инициализация переменных родителя
+ * 2выпол-я конструктор родителя
+ * 3- ин-ся переменные ребенка*/
+ */

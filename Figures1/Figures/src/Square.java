@@ -12,11 +12,13 @@ public class Square extends Figures {
 		
 	}
 	
-	Square() throws Exception{
+	Square(String figureTypes) throws Exception{
 		setInput();
 		setFigureColor();
 		setPerimeter();
 		setSquare();
+		setFigureType(figureTypes);
+		getInfo();
 		
 	}
 	
@@ -25,9 +27,15 @@ public class Square extends Figures {
 		while (flg) {
 			System.out.println("¬ведите сторону квадрата:");
 			Scanner reader = new Scanner(System.in);
-			if (reader.hasNextInt() || reader.hasNextDouble()) {
+			if (reader.hasNextDouble()) {
 				a = reader.nextDouble();
-				flg = false;
+				if(a<=0){
+					a=0;
+				System.out.println("¬ведите число больше нул€!!!");
+				} else{
+					flg = false;
+					}
+				
 			} else
 				{System.out.println("¬ведите число!!!");}
 			
